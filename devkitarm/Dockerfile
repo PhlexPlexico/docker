@@ -23,7 +23,7 @@ RUN git clone https://github.com/Steveice10/bannertool.git \
 RUN wget https://github.com/dnasdw/3dstool/releases/download/v1.2.6/3dstool_linux_x86_64.tar.gz \
     tar -zxvf 3dstool_linux_x86_64.tar.gz \
     mv ./3dstool /usr/local/bin/3dstool \
-    chmod + /usr/local/bin/3dstool
+    chmod +x /usr/local/bin/3dstool
 RUN wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz \
     tar xzf Python-3.8.5.tgz \
     cd Python-3.8.5 \
