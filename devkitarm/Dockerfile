@@ -11,6 +11,8 @@ RUN apt update && sudo apt install automake build-essential wget unzip zip \
 RUN wget https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v0.17/makerom-v0.17-ubuntu_x86_64.zip
 RUN unzip makerom-v0.17-ubuntu_x86_64.zip && \
     mv ./makerom /usr/local/bin/makerom && \
+    mv ./ext_key.txt /usr/local/bin/ext_key.txt && \
+    mv ./ignore_3dstool.txt /usr/local/bin/ignore_3dstool.txt && \
     chmod +x /usr/local/bin/makerom
 RUN git clone https://github.com/Steveice10/bannertool.git && \
     cd bannertool && \
