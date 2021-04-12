@@ -5,9 +5,10 @@ MAINTAINER Dave Murphy <davem@devkitpro.org>
 RUN dkp-pacman -Syyu --noconfirm 3ds-dev nds-dev gp32-dev gba-dev nds-portlibs && \
     dkp-pacman -S --needed --noconfirm `dkp-pacman -Slq dkp-libs | grep '^3ds-'` && \
     dkp-pacman -Scc --noconfirm 
-RUN apt update && sudo apt install automake build-essential wget unzip zip \
+RUN apt-get update && apt-get install -y automake build-essential wget unzip zip \
         libreadline-gplv2-dev libncursesw5-dev libssl-dev \
-        libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
+        libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev \
+        qrencode
 RUN wget https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v0.17/makerom-v0.17-ubuntu_x86_64.zip
 RUN unzip makerom-v0.17-ubuntu_x86_64.zip && \
     mv ./makerom /usr/local/bin/makerom && \
